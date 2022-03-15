@@ -59,7 +59,7 @@ public class TradeResult implements ITradeResult {
 	
 	@Override
 	public String toString() {
-		String output = "Quote[id: " + id.toString()
+		String output = "TradeResult[id: " + id.toString()
 							+ "\nsymbol: " + symbol
 							+ "\navgPrice: " + avgPrice
 							+ "\nvolumeRequested: " + volumeRequested
