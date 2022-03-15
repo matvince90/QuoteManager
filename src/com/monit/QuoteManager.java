@@ -68,6 +68,14 @@ public class QuoteManager implements IQuoteManager {
 		return null;
 	}
 
+	/**
+	 * There are 2 directions to go for this method in the case of there being an insufficient volume: 
+	 * 1. Complete trade with as many as is available
+	 * 2. Do not trade
+	 * I decided to go with the first case here. If I would have gone with the second case, I would have
+	 * iterated through the list of getAllAvailableQuotes once to find out how many were available
+	 * before and if there were enough, then I would execute the trade, otherwise, return a null
+	 */
 	@Override
 	public TradeResult ExecuteTrade(String symbol, int volumeRequested) {
 		TradeResult tr = new TradeResult();
